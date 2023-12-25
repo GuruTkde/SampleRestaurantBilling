@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleRestaurantBilling" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="I1T-3i-GSv">
+                                <rect key="frame" x="35" y="299" width="320" height="259"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TjR-CI-40V">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="69.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pd2-Yc-K2n">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="L7T-Ny-UsY">
+                                                <rect key="frame" x="0.0" y="35.333333333333314" width="320" height="34.333333333333343"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qp-xR-OWx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="34.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.81017041868633699" green="0.6461992893475963" blue="0.068459875048073993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Credit Card">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                            <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="groupOneInvoiceDidClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dxB-0m-Tm4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AA-a5-Hdt">
+                                                        <rect key="frame" x="162.66666666666663" y="0.0" width="157.33333333333337" height="34.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.73333333329999995" green="0.92549019610000005" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Cash"/>
+                                                        <connections>
+                                                            <action selector="groupOneInvoiceDidClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AZ2-Hx-d2b"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0fF-Cc-d9h">
+                                        <rect key="frame" x="0.0" y="94.666666666666686" width="320" height="69.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVO-5x-Il1">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zri-ck-YFp">
+                                                <rect key="frame" x="0.0" y="35.333333333333314" width="320" height="34.333333333333343"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTs-h7-EwD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="34.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.81017041869999995" green="0.64619928930000003" blue="0.068459875049999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Credit Card">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                            <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="groupTwoInvoiceDidClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3nF-eU-Y7j"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCv-ft-TjA">
+                                                        <rect key="frame" x="162.66666666666663" y="0.0" width="157.33333333333337" height="34.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.73333333329999995" green="0.92549019610000005" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Cash"/>
+                                                        <connections>
+                                                            <action selector="groupTwoInvoiceDidClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Re-BZ-vAg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aWf-fx-8Dz">
+                                        <rect key="frame" x="0.0" y="189.33333333333331" width="320" height="69.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Three" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNm-l8-Xtf">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MIj-Xv-5Wv">
+                                                <rect key="frame" x="0.0" y="35.333333333333314" width="320" height="34.333333333333343"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5n-oF-UYT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="34.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.81017041869999995" green="0.64619928930000003" blue="0.068459875049999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Credit Card">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                            <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="groupThreeInvoiceDidClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CXe-6y-fgw"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LH7-gj-QzC">
+                                                        <rect key="frame" x="162.66666666666663" y="0.0" width="157.33333333333337" height="34.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.73333333329999995" green="0.92549019610000005" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Cash"/>
+                                                        <connections>
+                                                            <action selector="groupThreeInvoiceDidClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w6q-Tj-K2o"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I1T-3i-GSv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="VeP-hZ-RXM"/>
+                            <constraint firstItem="I1T-3i-GSv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="gG2-sJ-oOb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I1T-3i-GSv" secondAttribute="trailing" constant="35" id="ufu-gA-Gpp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
