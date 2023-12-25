@@ -29,7 +29,7 @@ class BillingViewModel {
         let gardenSalad = ProductDetails.init(name: Constants.gardenSalad.rawValue, taxPercentage: taxPercentage, totalPrice: Constants.gardenSalad.price)
         let coffee = ProductDetails.init(name: Constants.coffee.rawValue, taxPercentage: taxPercentage, totalPrice: Constants.coffee.price)
         let soda = ProductDetails.init(name: Constants.soda.rawValue, taxPercentage: taxPercentage, totalPrice: Constants.soda.price)
-
+        
         products = ProductModel.init(tea: tea,
                                      bigBrekkie: bigBrekkie,
                                      soda: soda,
@@ -79,27 +79,42 @@ class BillingViewModel {
     func getInvoiceAndTransactionsForGroupOne(isCreditCardPayment: Bool) {
         for person in groupOne.members {
             print("\n\n\n ****************** \(person.name) Invoice *******************\n")
-            let billAmount = invoiceUtility.generateInvoice(model: person.products, groupId: 1, isCreditCardPayament: isCreditCardPayment)
+            let billAmount = invoiceUtility.generateInvoice(model: person.products,
+                                                            groupId: 1,
+                                                            isCreditCardPayament: isCreditCardPayment)
             print("\n ***************** \(person.name) Transaction ******************\n")
-            invoiceUtility.payBill(groupId: 1, billAmount: billAmount, paidAmount: 30)
+            invoiceUtility.payBill(groupId: 1,
+                                   billAmount: billAmount,
+                                   paidAmount: 30)
         }
     }
     
     func getInvoiceAndTransactionsForGroupTwo(isCreditCardPayment: Bool) {
         print(" Group Two Invoice \n")
-        let billAmount = invoiceUtility.generateInvoice(model: groupTwo.products, groupId: 2, isCreditCardPayament: isCreditCardPayment,discountPercentage: 10)
+        let billAmount = invoiceUtility.generateInvoice(model: groupTwo.products,
+                                                        groupId: 2,
+                                                        isCreditCardPayament: isCreditCardPayment,
+                                                        discountPercentage: 10)
         print("\n Group Two Transaction \n")
-        invoiceUtility.payBill(groupId: 2, billAmount: billAmount, paidAmount: 70)
+        invoiceUtility.payBill(groupId: 2,
+                               billAmount: billAmount,
+                               paidAmount: 70)
     }
     
     
     func getInvoiceAndTransactionsForGroupThree(isCreditCardPayment: Bool) {
         print(" Group Three Invoice \n")
-        var billAmount = invoiceUtility.generateInvoice(model: groupTwo.products, groupId: 3, isCreditCardPayament: isCreditCardPayment, discount: 25.0, initialTab: 50.0)
+        var billAmount = invoiceUtility.generateInvoice(model: groupTwo.products,
+                                                        groupId: 3,
+                                                        isCreditCardPayament: isCreditCardPayment,
+                                                        discount: 25.0,
+                                                        initialTab: 50.0)
         print("\n Group Three Transaction \n")
         let amountPerPerson = billAmount/7
         for _ in 0..<7 {
-            invoiceUtility.payBill(groupId: 3, billAmount: billAmount, paidAmount: amountPerPerson)
+            invoiceUtility.payBill(groupId: 3,
+                                   billAmount: billAmount,
+                                   paidAmount: amountPerPerson)
             billAmount -= amountPerPerson
         }
     }

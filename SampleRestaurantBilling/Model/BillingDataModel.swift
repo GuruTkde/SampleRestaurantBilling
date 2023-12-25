@@ -46,7 +46,7 @@ struct ProductDetails {
          totalPrice: Double)
     {
         let priceAndTaxAmount = ProductDetails.getPriceFromTotalAmount(price: totalPrice,
-                                                                     percentage: taxPercentage)
+                                                                       percentage: taxPercentage)
         self.name = name
         self.price = priceAndTaxAmount.price
         self.taxAmount = priceAndTaxAmount.tax
